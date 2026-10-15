@@ -1,0 +1,9 @@
+FROM mysql:8.0
+
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=falaisa
+
+# Todo .sql desta pasta e executado na primeira inicializacao do banco
+COPY db_init/ /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

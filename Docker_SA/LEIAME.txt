@@ -1,0 +1,18 @@
+ESTRUTURA
+  build.bat   -> clona (se preciso), cria imagens, network e conteineres
+  stop.bat    -> para os conteineres
+  start.bat   -> inicia novamente sem recriar
+  remove.bat  -> remove conteineres, imagens e network
+  Dockerfile.php / Dockerfile.mysql
+
+AJUSTE OBRIGATORIO NO PROJETO (arquivo de conexao PHP, ex.: conexao.php / config.php)
+  host     = "falai-db"     (NAO "localhost" nem "127.0.0.1")
+  usuario  = "root"
+  senha    = "root"
+  banco    = "falaisa"       (ou o nome usado no .sql do projeto)
+Depois de editar, rode remove.bat e build.bat novamente.
+
+USO
+  1) Abra o Docker Desktop
+  2) Execute build.bat
+  3) Acesse http://localhost no Chrome
